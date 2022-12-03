@@ -3,4 +3,7 @@ calories = sort(map(
     split(read("inputs/01.txt", String), "\n\n")
 ))
 
-println((calories[end], sum(calories[end-2:end])))
+output() = (calories[end], sum(calories[end-2:end]))
+
+@time output()
+@show output()
