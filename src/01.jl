@@ -1,9 +1,15 @@
-calories = sort(map(
-    group -> sum(map(n -> parse(Int, n), split(group, '\n'))),
-    split(read("inputs/01.txt", String), "\n\n")
-))
+input = read("inputs/01.txt", String)
 
-output() = (calories[end], sum(calories[end-2:end]))
+function day01()
+    calories = sort(
+        map(
+            group -> sum(map(n -> parse(Int, n), split(group, '\n'))),
+            split(input, "\n\n")
+        )
+    )
 
-@time output()
-@show output()
+    (calories[end], sum(calories[end-2:end]))
+end
+
+@time day01()
+@show day01()
