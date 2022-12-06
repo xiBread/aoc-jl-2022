@@ -28,7 +28,7 @@ function day05()
         stacks′[from] = stacks′[from][1:end-quantity]
     end
 
-    (prod(last.(stacks)), prod(last.(stacks′)))
+    prod(last.(stacks)), prod(last.(stacks′))
 end
 
 @time day05()

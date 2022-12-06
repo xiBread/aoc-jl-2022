@@ -8,7 +8,7 @@ function day01()
         )
     )
 
-    (calories[end], sum(calories[end-2:end]))
+    calories[end], sum(calories[end-2:end])
 end
 
 @time day01()

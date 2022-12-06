@@ -6,7 +6,7 @@ function findmarker(len::Int64)
     end
 end
 
-day06() = (findmarker(4), findmarker(14))
+day06() = findmarker(4), findmarker(14)
 
 @time day06()
 @show day06()
