@@ -1,5 +1,5 @@
 function findmarker(len::Int64)
-    input = read("inputs/06.txt", String)
+    input = readline("inputs/06.txt")
 
     for i in len:length(input)
         allunique(input[i-~-len:i]) && return i
