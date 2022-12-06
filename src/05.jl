@@ -9,9 +9,10 @@ function day05()
 
     for i ∈ 1:9
         for j ∈ idx:-1:1
-            crates[j][4i-2] == ' ' && break
+            crate = crates[j][4i-2]
+            crate == ' ' && break
 
-            push!(stacks[i], crates[j][4i-2])
+            push!(stacks[i], crate)
         end
     end
 
