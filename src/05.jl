@@ -5,7 +5,7 @@ function day05()
     crates = input[1:idx]
     procedure = input[idx+3:end]
 
-    stacks = [Char[] for _ in 1:9]
+    stacks = [Char[] for _ ∈ 1:9]
 
     for i ∈ 1:9
         for j ∈ idx:-1:1
