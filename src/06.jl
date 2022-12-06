@@ -1,9 +1,7 @@
 function findmarker(len::Int64)
-    input = readline("inputs/06.txt")
+    input = read("inputs/06.txt")
 
-    for i in len:length(input)
-        allunique(input[i-~-len:i]) && return i
-    end
+    ~-findfirst(i -> allunique(input[i-~-len:i]), len:length(input)) + len
 end
 
 day06() = findmarker(4), findmarker(14)
