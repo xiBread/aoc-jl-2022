@@ -1,6 +1,5 @@
-input = readlines("inputs/04.txt")
-
 function day04()
+    input = readlines("inputs/04.txt")
     x = y = 0
 
     for line ∈ input

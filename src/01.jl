@@ -1,6 +1,6 @@
-input = read("inputs/01.txt", String)
-
 function day01()
+    input = read("inputs/01.txt", String)
+
     calories = sort(
         map(
             group -> sum(map(n -> parse(Int, n), split(group, '\n'))),
