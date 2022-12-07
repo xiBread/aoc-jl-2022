@@ -7,5 +7,4 @@ function day03()
     sum(priority(first(∩(input[i:i+2]...))) for i ∈ 1:3:length(input))
 end
 
-@time day03()
-@show day03()
+println(@time "Day 03" day03())

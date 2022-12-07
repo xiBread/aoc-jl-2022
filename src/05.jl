@@ -31,5 +31,4 @@ function day05()
     prod(last.(stacks)), prod(last.(stacks′))
 end
 
-@time day05()
-@show day05()
+println(@time "Day 05" day05())

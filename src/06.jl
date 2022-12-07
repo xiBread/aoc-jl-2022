@@ -6,5 +6,4 @@ end
 
 day06() = findmarker(4), findmarker(14)
 
-@time day06()
-@show day06()
+println(@time "Day 06" day06())

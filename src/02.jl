@@ -9,5 +9,4 @@ function day02()
     sum(score(a, (a + b + 2) % 3) for (a, b) ∈ rounds)
 end
 
-@time day02()
-@show day02()
+println(@time "Day 02" day02())

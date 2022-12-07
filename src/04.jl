@@ -12,5 +12,4 @@ function day04()
     x, y
 end
 
-@time day04()
-@show day04()
+println(@time "Day 04" day04())

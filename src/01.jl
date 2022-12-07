@@ -11,5 +11,4 @@ function day01()
     calories[end], sum(calories[end-2:end])
 end
 
-@time day01()
-@show day01()
+println(@time "Day 01" day01())

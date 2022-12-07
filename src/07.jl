@@ -22,5 +22,4 @@ function day07()
     minimum(filter(i -> i ≥ freespace, vals))
 end
 
-@time day07()
-@show day07()
+println(@time "Day 07" day07())
