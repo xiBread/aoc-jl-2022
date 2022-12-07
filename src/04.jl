@@ -1,8 +1,7 @@
 function day04()
-    input = readlines("inputs/04.txt")
     x = y = 0
 
-    for line ∈ input
+    for line ∈ eachline("inputs/04.txt")
         a, b, c, d = map(n -> parse(Int, n), split(replace(line, "-" => ","), ","))
         ab, cd = Set(a:b), Set(c:d)
 
