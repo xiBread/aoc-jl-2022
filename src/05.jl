@@ -19,7 +19,7 @@ function day05()
     stacks′ = deepcopy(stacks)
 
     for line ∈ procedure
-        (quantity, from, to) = parse.(Int, split(line)[2:2:6])
+        quantity, from, to = parse.(Int, split(line)[2:2:6])
 
         append!(stacks[to], reverse(stacks[from][end-quantity+1:end]))
         append!(stacks′[to], stacks′[from][end-quantity+1:end])
@@ -28,7 +28,7 @@ function day05()
         stacks′[from] = stacks′[from][1:end-quantity]
     end
 
-    prod(last.(stacks)), prod(last.(stacks′))
+    join(last.(stacks)), join(last.(stacks′))
 end
 
 println(@time "Day 05" day05())
