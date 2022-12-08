@@ -1,5 +1,6 @@
+const input = readlines("inputs/05.txt")
+
 function day05()
-    input = readlines("inputs/05.txt")
     idx = findfirst('1' .∈ input) - 1
 
     crates = input[1:idx]

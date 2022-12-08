@@ -1,8 +1,9 @@
-function findmarker(len::Int64)
-    input = read("inputs/06.txt")
+const input = read("inputs/06.txt")
 
-    ~-findfirst(i -> allunique(input[i-~-len:i]), len:length(input)) + len
-end
+findmarker(len) = ~-findfirst(
+    x -> !any(m -> any(n -> x[m] == x[n], m+1:length(x)), 1:length(x)),
+    ((view(input, i:i+len-1)) for i in 1:length(input)-len+1)
+) + len
 
 day06() = findmarker(4), findmarker(14)
 
