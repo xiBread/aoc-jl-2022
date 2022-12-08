@@ -1,13 +1,11 @@
 function day01()
-    input = read("inputs/01.txt", String)
+    groups = [[0]]
 
-    calories = sort(
-        map(
-            group -> sum(map(n -> parse(Int, n), split(group, '\n'))),
-            split(input, "\n\n")
-        )
-    )
+    for line in eachline("inputs/01.txt")
+        line == "" ? push!(groups, [0]) : push!(groups[end], parse(Int, line))
+    end
 
+    calories = sort([sum(group) for group in groups])
     calories[end], sum(calories[end-2:end])
 end
 

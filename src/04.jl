@@ -2,8 +2,8 @@ function day04()
     x = y = 0
 
     for line ∈ eachline("inputs/04.txt")
-        a, b, c, d = map(n -> parse(Int, n), split(replace(line, "-" => ","), ","))
-        ab, cd = Set(a:b), Set(c:d)
+        a, b, c, d = map(n -> parse(Int, n), eachsplit(line, [',', '-']))
+        ab, cd = a:b, c:d
 
         x += ab ⊆ cd || cd ⊆ ab
         y += length(ab ∩ cd) > 0
