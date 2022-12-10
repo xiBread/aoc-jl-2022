@@ -36,5 +36,4 @@ function day09()
     length(unique(a)), length(unique(b))
 end
 
-@time day09()
-@show day09()
+println(@time "Day 09" day09())
