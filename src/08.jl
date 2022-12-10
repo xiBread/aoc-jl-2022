@@ -1,3 +1,5 @@
+const input = readlines("inputs/08.txt")
+
 directions(map, i, j) = (
     map[1:i-1, j], # up
     map[i+1:end, j], # down
@@ -8,7 +10,7 @@ directions(map, i, j) = (
 visibles(direction, height) = something(findfirst(height .≤ direction), size(direction, 1))
 
 function day08()
-    map = parse.(Int, reduce(hcat, collect.(readlines("inputs/08.txt"))))
+    map = parse.(Int, reduce(hcat, collect.(input)))
     h, w = size(map)
 
     visible = 2h + 2w - 4

@@ -1,9 +1,11 @@
+const input = readlines("inputs/07.txt")
+
 function day07()
     paths = [""]
     sizes = Dict{String,Int64}()
     freespace = -40_000_000
 
-    for line ∈ eachline("inputs/07.txt")
+    for line ∈ input
         if startswith(line, "\$ cd ..")
             pop!(paths)
         elseif startswith(line, "\$ cd ")

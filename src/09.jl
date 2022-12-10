@@ -26,7 +26,7 @@ end
 function day09()
     Δ = map(x -> (x[1], parse(Int, x[2:end])), input) |>
         (it -> map(x -> repeat(x[1], x[2]), it)) |>
-        (it -> Iterators.Flatten(it)) |>
+        Iterators.Flatten |>
         (it -> map(x -> directions[x], it)) |>
         (it -> pushfirst!(it, [0, 0]))
 

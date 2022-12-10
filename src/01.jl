@@ -1,7 +1,9 @@
+const input = readlines("inputs/01.txt")
+
 function day01()
     groups = [[0]]
 
-    for line in eachline("inputs/01.txt")
+    for line in input
         line == "" ? push!(groups, [0]) : push!(groups[end], parse(Int, line))
     end
 

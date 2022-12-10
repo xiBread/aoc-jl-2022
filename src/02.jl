@@ -1,8 +1,8 @@
+const input = readlines("inputs/02.txt")
+
 score(a, b) = ((b - a + 4) % 3) * 3 + b + 1
 
 function day02()
-    input = readlines("inputs/02.txt")
-
     rounds = map(line -> (line[1] - 'A', line[3] - 'X'), input)
 
     sum(score(a, b) for (a, b) ∈ rounds),
