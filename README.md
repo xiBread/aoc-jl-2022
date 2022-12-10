@@ -12,3 +12,4 @@ Measured with Julia's built-in [`@time`](https://docs.julialang.org/en/v1/base/b
 | [06](src/06.jl) | 0.10 μs  | -        | -         |
 | [07](src/07.jl) | 6.79 ms  | 3.70 k   | 307.93 kb |
 | [08](src/08.jl) | 59.58 ms | 195.18 k | 47.81 mb  |
+| [09](src/09.jl) | 14.47 ms | 323.04 k | 25.47 mb  |
