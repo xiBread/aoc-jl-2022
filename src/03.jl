@@ -10,7 +10,7 @@ end
 
 day03() = (
     sum(priority(intersect(line[1:end÷2], line[end÷2+1:end])) for line ∈ input),
-    sum(priority(∩(i...)[1]) for i ∈ zip(input[1:3:end], input[2:3:end], input[3:3:end]))
+    sum(priority(∩(i...)[1]) for i ∈ zip(input[1:3:end], input[2:3:end], input[3:3:end])),
 )
 
 println(@time "Day 03" day03())
