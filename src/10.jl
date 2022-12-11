@@ -21,7 +21,7 @@ function day10()
         register += value
     end
 
-    (strength, join(map(join, eachrow(ifelse.(crt', "#", "."))), '\n'))
+    strength, join(map(join, eachrow(ifelse.(crt', "#", "."))), '\n')
 end
 
 println.(@time "Day 10" day10())
