@@ -7,7 +7,7 @@ function day01()
         line == "" ? push!(groups, [0]) : push!(groups[end], parse(Int, line))
     end
 
-    calories = sort([sum(group) for group in groups])
+    calories = sort(sum.(groups))
     calories[end], sum(calories[end-2:end])
 end
 
