@@ -10,7 +10,7 @@ function day10()
         value = filter(!isletter, line)
         value = value == "" ? 0 : parse(Int, value)
 
-        for _ ∈ 1:(iszero(value) ? 1 : 2)
+        for _ ∈ 1:(value == 0 ? 1 : 2)
             i == 41 && (i = 1; j += 1)
             i == 20 && (strength += register * (40j - 20))
 
