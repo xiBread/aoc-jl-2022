@@ -1,0 +1,7 @@
+name = "AdventOfCode2022"
+uuid = "2ffe5fac-0182-425e-b175-7a7a1406054c"
+version = "1.0.0"
+
+[deps]
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+Match = "7eb4fadd-790c-5f42-8a69-bfa0b872bfbf"
